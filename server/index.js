@@ -8,16 +8,8 @@ const app = express();
 const speechKey = process.env.REACT_APP_SPEECH_KEY;
 const speechRegion = process.env.REACT_APP_SPEECH_REGION;
 
-
-
-
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(pino);
-
-
-
-
 
 app.get('/api/get-speech-token', async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
@@ -40,15 +32,8 @@ app.get('/api/get-speech-token', async (req, res, next) => {
             res.status(401).send('There was an error authorizing your speech key.');
         }
     }
-
-
-
+    
 });
-
-
-
-
-
 
 app.listen(3001, () =>
     console.log('Express server is running on localhost:3001')
