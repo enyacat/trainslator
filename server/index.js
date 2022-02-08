@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 
 const app = express();
-const speechKey = process.env.SPEECH_KEY;
-const speechRegion = process.env.SPEECH_REGION;
+const speechKey = process.env.REACT_APP_SPEECH_KEY;
+const speechRegion = process.env.REACT_APP_SPEECH_REGION;
 
 
 

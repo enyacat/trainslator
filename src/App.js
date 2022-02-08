@@ -12,9 +12,6 @@ const { v4: uuidv4 } = require('uuid');
 
 
 
-
-
-
 export default class App extends Component {
     constructor(props) {
         super(props);
@@ -53,7 +50,7 @@ export default class App extends Component {
 
                 //below is the text-to-text translation
 
-                var subscriptionKey = "your subscription key";
+                var subscriptionKey = process.env.REACT_APP_TRANSLATOR_KEY;
                 var endpoint = "https://api.cognitive.microsofttranslator.com/";
 
                 // Add your location, also known as region. The default is global.

@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/text-to-speech-test/token.php
 
 # testing
 /coverage
