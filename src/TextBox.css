@@ -1,0 +1,21 @@
+.textbox-element {
+    grid-area: textbox;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+}
+
+.textbox-element textarea {
+    width: 320px;
+    height: 105px;
+}
+
+.textbox-element button {
+    text-align: center;
+    border-top: 30px solid white;
+    border-bottom: 30px solid white;
+    border-left: 30px solid green;
+    padding: 0;
+    border-right: 0;
+}
