@@ -1,37 +1,37 @@
 import './MessageHistory.css'
-import TextToText from './TextToText.js'
-import { useEffect, useState } from 'react'
+// import TextToText from './TextToText.js'
+// import { useEffect, useState } from 'react'
 
 
 
 export default function MessageHistory(props) {
-    var displayText = props.displayText
-    // console.log(displayText[displayText.length - 1])
-    const [translated, setTranslated] = useState([])
-    const testing = () => {
-        const translatedarr = []
-        displayText.forEach(text => {
-        TextToText(text).then(res => { setTranslated([...translatedarr,res]) })
-        console.log(translated)
-    })
-    }
+    // var displayText = props.displayText
+
+    // const [translated, setTranslated] = useState([])
+    // const testing = () => {
+    //     const translatedarr = []
+    //     displayText.forEach(text => {
+    //     TextToText(text).then(res => { setTranslated([...translatedarr,res]) })
+    //     console.log(translated)
+    // })
+    // }
     
-    useEffect(() => {
-        testing()
-    }, [displayText])
+    // useEffect(() => {
+    //     testing()
+    // }, [displayText])
 
     return (
         <div className='message-history'>
-            {displayText.map((text, idx) =>
+            {/* {displayText.map((text, idx) =>
                 <>
                     <p>
                         {text}
                     </p>
                     <p>
-                        {translated[idx]}
+                        {translated}
                     </p>
                 </>
-            )}
+            )} */}
         </div>
     )
 }

@@ -27,7 +27,6 @@ export default function SpeechToText({ displayText, setDisplayText }) {
                 // TextToText(newarr[0])
             } else {
                 let newarr = [...displayText, "'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.'"]
-                setDisplayText(newarr)
                 console.log(newarr)
                 // change button to vibrate on error 
             }
