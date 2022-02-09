@@ -13,8 +13,7 @@ import MessageHistory from './MessageHistory.js'
 // 1. speech to text => string text in english 
 // 2. textbox
 //3. messageHistory <= array ["string 1 ", "string 2"] <= text to text 
-console.log(process.env.REACT_APP_TRANSLATOR_KEY)
-console.log(process.env.REACT_APP_SPEECH_KEY)
+
 
 function App() {
   var [displayText, setDisplayText] = useState(["hello", "wewantthis"])

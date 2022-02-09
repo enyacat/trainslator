@@ -1,3 +1,5 @@
 .message-history {
     grid-area: messageHistory;
+    height:100%;
+    width: 100%;
 }
