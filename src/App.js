@@ -33,8 +33,8 @@ function App() {
       <section>
         <MessageHistory displayText={displayText} />
       </section>
-      <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} />
-      <SpeechToText displayText={displayText} setDisplayText={setDisplayText} />
+      <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord}/>
+      <SpeechToText displayText={displayText} setDisplayText={setDisplayText} currentWord={currentWord} setCurrentWord={setCurrentWord}/>
     </div>
   )
 }

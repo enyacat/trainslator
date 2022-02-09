@@ -5,7 +5,7 @@ const speechsdk = require('microsoft-cognitiveservices-speech-sdk')
 
 
 
-export default function SpeechToText({ displayText, setDisplayText }) {
+export default function SpeechToText({ displayText, setDisplayText, currentWord, setCurrentWord}) {
     // async function - function will now complete everything simultaneously, HOWEVER one of the benefits of this is the await.
     async function speechToTalk() {
         // await - waits for a promise - if the certain promise is fulfilled, assign to tokenObject, and continue with the async function. 
@@ -20,14 +20,11 @@ export default function SpeechToText({ displayText, setDisplayText }) {
         recognizer.recognizeOnceAsync(result => {
 
             if (result.reason === ResultReason.RecognizedSpeech) {
-                console.log()
-                let newarr = [...displayText, result.privText]
-                setDisplayText(newarr)
-                console.log(newarr)
+                setCurrentWord(result.privText)
+                console.log(currentWord)
                 // TextToText(newarr[0])
             } else {
                 let newarr = [...displayText, "'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.'"]
-                console.log(newarr)
                 // change button to vibrate on error 
             }
         });
