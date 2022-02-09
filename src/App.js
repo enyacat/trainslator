@@ -16,7 +16,7 @@ import MessageHistory from './MessageHistory.js'
 
 
 function App() {
-  var [displayText, setDisplayText] = useState(["hello", "wewantthis"])
+  var [displayText, setDisplayText] = useState(["hello", "Test"])
   function setting() {
     var newarr = [...displayText, "state"]
     setDisplayText(newarr)

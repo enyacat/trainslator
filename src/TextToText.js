@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 
 export default function TextToText(text) {
-    console.log(text)
+    // console.log(text)
     return axios({
         baseURL: "https://api.cognitive.microsofttranslator.com/",
         url: '/translate',
@@ -14,7 +14,7 @@ export default function TextToText(text) {
         params: {
             'api-version': '3.0',
             'from': 'en',
-            'to': ['zh-Hans', 'ko']
+            'to': ['ko']
         },
         data: [{
             'text': `${text}`
@@ -22,6 +22,8 @@ export default function TextToText(text) {
         responseType: 'json'
     }).then(function (response) {
         // console.log(JSON.stringify(response.data[0].translations[0].text))
+        console.log(JSON.stringify(response.data[0].translations[0].text))
         return JSON.stringify(response.data[0].translations[0].text)
+
     })
 }
