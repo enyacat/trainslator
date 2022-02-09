@@ -1,5 +1,4 @@
 import './SpeechToText.css'
-import TextToText from './TextToText.js'
 import { getTokenOrRefresh } from './token_util';
 import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk')
@@ -25,7 +24,7 @@ export default function SpeechToText({ displayText, setDisplayText }) {
                 let newarr = [...displayText, result.privText]
                 setDisplayText(newarr)
                 console.log(newarr)
-                // TextToText(result)
+                // TextToText(newarr[0])
             } else {
                 let newarr = [...displayText, "'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.'"]
                 setDisplayText(newarr)
