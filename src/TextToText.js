@@ -14,16 +14,14 @@ export default function TextToText(text) {
         params: {
             'api-version': '3.0',
             'from': 'en',
-            'to': ['ko']
+            'to': 'ko'
         },
         data: [{
-            'text': `${text}`
+            'text': text
         }],
         responseType: 'json'
     }).then(function (response) {
-        // console.log(JSON.stringify(response.data[0].translations[0].text))
-        console.log(JSON.stringify(response.data[0].translations[0].text))
-        return JSON.stringify(response.data[0].translations[0].text)
-
+        console.log(response.data[0].translations[0].text)
+        return response.data[0].translations[0].text
     })
 }

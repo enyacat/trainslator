@@ -16,7 +16,10 @@ import MessageHistory from './MessageHistory.js'
 
 
 function App() {
-  var [displayText, setDisplayText] = useState(["hello", "Test"])
+  var [displayText, setDisplayText] = useState(["hello", "hi"])
+  var [translated, setTranslated] = useState(["안녕하세요", '안녕'])
+  var [currentWord, setCurrentWord] = useState('')
+
   function setting() {
     var newarr = [...displayText, "state"]
     setDisplayText(newarr)
@@ -30,7 +33,7 @@ function App() {
       <section>
         <MessageHistory displayText={displayText} />
       </section>
-      <TextBox displayText={displayText} setDisplayText={setDisplayText} />
+      <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} />
       <SpeechToText displayText={displayText} setDisplayText={setDisplayText} />
     </div>
   )
