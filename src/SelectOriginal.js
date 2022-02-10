@@ -1,6 +1,6 @@
 import symObjTextToSpeech from './symObjTextToSpeech.js'
 
-export default function SelectTarget({ targetLanguage, setTargetLanguage }) {
+export default function SelectOriginal({ originalLanguage, setOriginalLanguage }) {
     var voices = Object.keys(symObjTextToSpeech)
     function Options() {
         var Options = []
@@ -16,11 +16,11 @@ export default function SelectTarget({ targetLanguage, setTargetLanguage }) {
 
     function handleChange(event) {
         var newOption = event.target.value
-        setTargetLanguage(newOption)
+        setOriginalLanguage(newOption)
     }
 
     return (
-        <select value={targetLanguage} onChange={handleChange}>
+        <select value={originalLanguage} onChange={handleChange}>
             <Options />
         </select>
     )

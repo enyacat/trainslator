@@ -1,4 +1,4 @@
-var symbolObj = {
+var symObjTextToSpeech = {
     "Google Deutsch": "nl",
     'Google US English': "en",
     'Google UK English Female': "en",
@@ -19,4 +19,4 @@ var symbolObj = {
     "Google Cantonese": "yue",
 }
 
-export default symbolObj
+export default symObjTextToSpeech
