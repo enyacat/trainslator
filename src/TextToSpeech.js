@@ -20,12 +20,16 @@ export default function TextToSpeech(inputText, targetLanguage) {
         utterThis.onerror = function (event) {
             console.error('SpeechSynthesisUtterance.onerror');
         }
-
-        var selectedOption = targetLanguage
-        for (let i = 0; i < voices.length; i++) {
-            if (voices[i].name == selectedOption) {
-                utterThis.voice = voices[i]
-                break;
+        if (targetLanguage === "Google Chinese") {
+            utterThis.voice = voices[14]
+        } else if (targetLanguage === "Google Cantonese") {
+            utterThis.voice = voices[18]
+        } else {
+            for (let i = 0; i < voices.length; i++) {
+                if (voices[i].name == targetLanguage) {
+                    utterThis.voice = voices[i]
+                    break;
+                }
             }
         }
         window.speechSynthesis.speak(utterThis);
