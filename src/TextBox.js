@@ -17,13 +17,6 @@ export default function TextBox({ displayText, setDisplayText, translated, setTr
         console.log('adding input')
         var newarr = [...displayText, currentWord]
         setDisplayText(newarr)
-        // var newLanguage = targetLanguage
-        // if (newLanguage.includes("普通话") || newLanguage.includes("國語")) {
-        //     newLanguage = "Google Chinese"
-        // } else if (newLanguage.includes("粤語")) {
-        //     newLanguage = "Google Cantonese"
-        // }
-        // var languageSym = symObjTextToSpeech[newLanguage]
         var targetSym = symObjTextToSpeech[targetLanguage]
         var originalSym = symObjTextToSpeech[originalLangauge]
         TextToText(currentWord, targetSym, originalSym).then(res => setTranslated([...translated, res]))
@@ -31,7 +24,7 @@ export default function TextBox({ displayText, setDisplayText, translated, setTr
 
     useEffect(() => {
         TextToSpeech(translated[translated.length - 1], targetLanguage)
-        console.log("it is here", translated)
+        // console.log("it is here", translated)
     }, [translated])
 
     return (

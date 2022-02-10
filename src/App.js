@@ -20,8 +20,8 @@ function App() {
   var [displayText, setDisplayText] = useState([])
   var [translated, setTranslated] = useState([])
   var [currentWord, setCurrentWord] = useState('')
-  var [targetLanguage, setTargetLanguage] = useState("Google Bahasa Indonesia")
   var [originalLanguage, setOriginalLanguage] = useState("Google US English")
+  var [targetLanguage, setTargetLanguage] = useState("Google 한국의")
 
   return (
     <div className="App">
@@ -34,9 +34,12 @@ function App() {
           <MessageHistory displayText={displayText} translated={translated} />
         </section>
         <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord} targetLanguage={targetLanguage} originalLanguage={originalLanguage} />
+        <div className='selection-grid'>
+          <SelectOriginal originalLanguage={originalLanguage} setOriginalLanguage={setOriginalLanguage} />
+          <div className='arrow right'></div>
+          <SelectTarget targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
+        </div>
         <SpeechToText displayText={displayText} setDisplayText={setDisplayText} currentWord={currentWord} setCurrentWord={setCurrentWord} originalLanguage={originalLanguage} />
-        <SelectTarget targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
-        <SelectOriginal originalLanguage={originalLanguage} setOriginalLanguage={setOriginalLanguage} />
       </div>
     </div>
   )
