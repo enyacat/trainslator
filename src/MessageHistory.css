@@ -7,37 +7,47 @@
     overflow-x: hidden;
     transform: rotate(180deg);
     direction: rtl;
-    /* align-items: center; */
     padding: 20px 20px 0 20px;
 }
 
+.text-gap {
+    display: grid;
+    gap: 10px;
+}
+
 .message-history-reverse {
+    display: grid;
     transform: rotate(180deg);
+    gap: 10px;
 }
 
 .translate-bubble-container{
     display: flex;
     justify-content: flex-start;
-    /* transform: rotate(180deg); */
 }
 
 .translate-bubble-container div {
     display: inline-block;
-    border: 2px solid blue;
     padding: 10px;
     border-radius: 15px;
+    border: 1px solid rgb(236, 216, 189);
+    background-color: rgb(239, 231, 221);
+    word-wrap: break-word;
+    max-width: 50%;
 }
 
 
 .text-bubble-container {
     display: flex;
     justify-content: flex-end;
-    /* transform: rotate(180deg); */
 }
 
 .text-bubble-container div{
     display: inline-block;
-    border: 2px solid brown;
+    word-wrap: break-word;
+    max-width: 50%;
     padding: 10px;
     border-radius: 15px;
+    border: 1px solid rgb(107, 194, 49);
+    background-color: rgb(133, 226, 73);
 }
