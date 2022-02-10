@@ -2,4 +2,42 @@
     grid-area: messageHistory;
     height:100%;
     width: 100%;
+    overflow:scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(180deg);
+    direction: rtl;
+    /* align-items: center; */
+    padding: 20px 20px 0 20px;
+}
+
+.message-history-reverse {
+    transform: rotate(180deg);
+}
+
+.translate-bubble-container{
+    display: flex;
+    justify-content: flex-start;
+    /* transform: rotate(180deg); */
+}
+
+.translate-bubble-container div {
+    display: inline-block;
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.text-bubble-container {
+    display: flex;
+    justify-content: flex-end;
+    /* transform: rotate(180deg); */
+}
+
+.text-bubble-container div{
+    display: inline-block;
+    border: 2px solid brown;
+    padding: 10px;
+    border-radius: 15px;
 }
