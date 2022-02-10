@@ -1,4 +1,4 @@
-export default function TextToSpeech(inputText, targetLanguage) {
+export default function TextToSpeech(inputText, targetLanguage, isToggled) {
     var synth = window.speechSynthesis.getVoices();
     var voices = [];
     for (let i = 0; i < synth.length; i++) {
@@ -32,6 +32,9 @@ export default function TextToSpeech(inputText, targetLanguage) {
                 }
             }
         }
+
+    }
+    if (isToggled) {
         window.speechSynthesis.speak(utterThis);
     }
 }

@@ -4,7 +4,7 @@ import symObjTextToSpeech from "./symObjTextToSpeech.js"
 import { useEffect } from 'react'
 import TextToSpeech from './TextToSpeech.js'
 
-export default function TextBox({ displayText, setDisplayText, translated, setTranslated, currentWord, setCurrentWord, targetLanguage, originalLangauge }) {
+export default function TextBox({ displayText, setDisplayText, translated, setTranslated, currentWord, setCurrentWord, targetLanguage, originalLangauge, isToggled }) {
 
     console.log(displayText)
     console.log(translated)
@@ -23,7 +23,7 @@ export default function TextBox({ displayText, setDisplayText, translated, setTr
     }
 
     useEffect(() => {
-        TextToSpeech(translated[translated.length - 1], targetLanguage)
+        TextToSpeech(translated[translated.length - 1], targetLanguage, isToggled)
         // console.log("it is here", translated)
     }, [translated])
 

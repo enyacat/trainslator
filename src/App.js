@@ -35,7 +35,7 @@ function App() {
         <section className='message-container'>
           <MessageHistory displayText={displayText} translated={translated} />
         </section>
-        <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord} targetLanguage={targetLanguage} originalLanguage={originalLanguage} />
+        <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord} targetLanguage={targetLanguage} originalLanguage={originalLanguage} isToggled={isToggled} />
         <div className='selection-grid'>
           <SelectOriginal originalLanguage={originalLanguage} setOriginalLanguage={setOriginalLanguage} />
           <div className='arrow right'></div>
