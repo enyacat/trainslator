@@ -11,7 +11,7 @@ Here’s a simple diagram of the planning of our single page app [https://excali
 - speech to text: Azure Speech service
 - text translation: Azure translator
 - text to speech: Web Speech API
-2. Day 1 afternoon: The text translation code was integrated into the speech to text React sample code both taken from the Azure website (”**[enyacat](https://github.com/enyacat)”).**
+2. Day 1 afternoon: The text translation code was integrated into the speech to text React sample code both taken from the Azure website (”**[enyacat](https://github.com/enyacat)”**).
 3. Day 2: Group discussing more planning. “**[HarryPdot](https://github.com/HarryPdot)**” refactored the code into React components.
 4. Day 3: Group solving the “input text not editable” problem. “**[HarryPdot](https://github.com/HarryPdot)”** solved the async problem and  can display the latest original and translated content. “**[enyacat](https://github.com/enyacat)”** couldn’t get Azure text to speech API to work and turned to the Web Speech API but having issues with the async and the module starting time.
 5. Day 4: “**[epoch](https://gist.github.com/epoch)”** helped with the async problem in text to speech. **“[brendonwang9](https://github.com/brendonwang9)”** refactored the code into React components, made the target and recognition language selection lists working. Group conquered the hurdle of integrating the language codes of Azure and the Web Speech APIs. “**[HarryPdot](https://github.com/HarryPdot)**” did CSS arranging each elements in place.
