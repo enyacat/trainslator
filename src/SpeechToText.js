@@ -25,7 +25,7 @@ export default function SpeechToText({ displayText, setDisplayText, currentWord,
                 // TextToText(newarr[0])
             } else {
                 let newarr = [...displayText, "'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.'"]
-                // change button to vibrate on error 
+
             }
         });
     }

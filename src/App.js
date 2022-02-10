@@ -20,18 +20,14 @@ function App() {
   var [translated, setTranslated] = useState(["안녕하세요", '안녕'])
   var [currentWord, setCurrentWord] = useState('')
 
-  function setting() {
-    var newarr = [...displayText, "state"]
-    setDisplayText(newarr)
-    console.log(newarr)
-  }
+
   return (
     <div className="App">
       <header>
-        <h1 onClick={setting} className='header'>Trainslator</h1>
+        <h1 className='header'>Trainslator</h1>
       </header>
       <section>
-        <MessageHistory displayText={displayText} />
+        <MessageHistory displayText={displayText} translated={translated}/>
       </section>
       <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord}/>
       <SpeechToText displayText={displayText} setDisplayText={setDisplayText} currentWord={currentWord} setCurrentWord={setCurrentWord}/>
