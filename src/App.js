@@ -4,7 +4,7 @@ import { useState } from 'react'
 import './App.css';
 import TextBox from './TextBox.js';
 import MessageHistory from './MessageHistory.js'
-import Select from "./Select.js"
+import SelectTarget from "./SelectTarget.js"
 // data we need
 // 1. display text => speech to text output
 // 2. output language 
@@ -29,11 +29,12 @@ function App() {
           <h1 className='header'>Trainslator</h1>
         </header>
         <section className='message-container'>
-          <MessageHistory displayText={displayText} translated={translated}/>
+          <MessageHistory displayText={displayText} translated={translated} />
         </section>
-          <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord} targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
-          <SpeechToText displayText={displayText} setDisplayText={setDisplayText} currentWord={currentWord} setCurrentWord={setCurrentWord}/>
-          <Select targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
+        <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord} targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
+        <SpeechToText displayText={displayText} setDisplayText={setDisplayText} currentWord={currentWord} setCurrentWord={setCurrentWord} />
+        <SelectTarget targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
+        {/* <SelectOriginal /> */}
       </div>
     </div>
   )
