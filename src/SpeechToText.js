@@ -7,7 +7,7 @@ const speechsdk = require('microsoft-cognitiveservices-speech-sdk')
 
 export default function SpeechToText({ displayText, setDisplayText, currentWord, setCurrentWord}) {
     // async function - function will now complete everything simultaneously, HOWEVER one of the benefits of this is the await.
-    async function speechToTalk() {
+    async function speechToTalk(event) {
         // await - waits for a promise - if the certain promise is fulfilled, assign to tokenObject, and continue with the async function. 
         // Meaning the function after this await can proceed ONCE the promise return by getTokenOrRefresh has been fulfilled.
         // tokenObject - checks your key BY server side index.js and creates a json for src/token_util.js to obtain that object
@@ -24,15 +24,14 @@ export default function SpeechToText({ displayText, setDisplayText, currentWord,
                 console.log(currentWord)
                 // TextToText(newarr[0])
             } else {
-                let newarr = [...displayText, "'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.'"]
-
+                console.error('no')
             }
         });
     }
 
     return (
         <div className='footer-element'>
-            <button className="mic-image" onClick={() => speechToTalk()}>click</button>
+            <button className="mic-image" onClick={() => speechToTalk()}></button>
         </div>
     )
 }

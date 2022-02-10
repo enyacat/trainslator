@@ -36,7 +36,7 @@ export default function TextBox({ displayText, setDisplayText, translated, setTr
         <div className='textbox-element'>
             <textarea value={currentWord} onChange={handleChange}>
             </textarea>
-            <button onClick={handleClick}></button>
+            <button onClick={handleClick}>Send</button>
         </div >
     )
 }

@@ -7,7 +7,7 @@ export default function MessageHistory({displayText, translated}) {
 
         for(let i=0; i<displayText.length; i++) {
             textArray.push(
-                <div>
+                <div className='text-gap'>
                     <div className='text-bubble-container'>
                         <div>
                             {displayText[i]}
