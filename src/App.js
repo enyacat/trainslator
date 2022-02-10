@@ -6,6 +6,7 @@ import TextBox from './TextBox.js';
 import MessageHistory from './MessageHistory.js'
 import SelectTarget from "./SelectTarget.js"
 import SelectOriginal from "./SelectOriginal.js"
+import Toggle from './Toggle.js';
 // data we need
 // 1. display text => speech to text output
 // 2. output language 
@@ -22,6 +23,7 @@ function App() {
   var [currentWord, setCurrentWord] = useState('')
   var [originalLanguage, setOriginalLanguage] = useState("Google US English")
   var [targetLanguage, setTargetLanguage] = useState("Google 한국의")
+  var [isToggled, setIsToggled] = useState(false)
 
   return (
     <div className="App">
@@ -40,6 +42,7 @@ function App() {
           <SelectTarget targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
         </div>
         <SpeechToText displayText={displayText} setDisplayText={setDisplayText} currentWord={currentWord} setCurrentWord={setCurrentWord} originalLanguage={originalLanguage} />
+        <Toggle isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
       </div>
     </div>
   )
