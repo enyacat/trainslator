@@ -9,7 +9,7 @@ export default function TextToSpeech(inputText, targetLanguage) {
     voices.sort(function (a, b) {
         const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
         if (aname < bname) return -1;
-        else if (aname == bname) return 0;
+        else if (aname === bname) return 0;
         else return +1;
     });
     if (inputText !== '') {
@@ -26,7 +26,7 @@ export default function TextToSpeech(inputText, targetLanguage) {
             utterThis.voice = voices[18]
         } else {
             for (let i = 0; i < voices.length; i++) {
-                if (voices[i].name == targetLanguage) {
+                if (voices[i].name === targetLanguage) {
                     utterThis.voice = voices[i]
                     break;
                 }

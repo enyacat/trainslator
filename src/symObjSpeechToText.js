@@ -1,5 +1,4 @@
 var symObjSpeechToText = {
-    "Google Deutsch": "de-DE",
     'Google US English': "en-US",
     'Google UK English Female': "en-GB",
     'Google UK English Male': "en-GB",
