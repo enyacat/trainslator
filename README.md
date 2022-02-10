@@ -1,5 +1,4 @@
-**# TRAINSLATOR - A React translator app** 
-
+## **TRAINSLATOR - A React translator app**
 This sample shows how to integrate the Azure Speech service, translator and Web Speech API into a A React translator app. This app allows user to set recognition language and target language, captures audio from a microphone, editing the text before translating into the target language in text and audio.
 
 ## **Wireframes**
