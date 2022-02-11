@@ -1,21 +1,21 @@
 var symObjSpeechToText = {
-    'Google US English': "en-US",
-    'Google UK English Female': "en-GB",
-    'Google UK English Male': "en-GB",
-    "Google español": "es-ES",
-    "Google español de Estados Unidos": "es-US",
-    "Google français": "fr-FR",
-    'Google हिन्दी': "hi-IN",
-    "Google Bahasa Indonesia": "id-ID",
-    "Google italiano": "it-IT",
-    "Google 日本語": "ja-JP",
-    "Google 한국의": "ko-KR",
-    "Google Nederlands": "nl-NL",
-    "Google polski": "pl-PL",
-    "Google português do Brasil": "pt-BR",
-    "Google русский": "ru-RU",
-    "Google Chinese": "zh-CN",
-    "Google Cantonese": "zh-HK"
+    'US English': "en-US",
+    'UK English Female': "en-GB",
+    'UK English Male': "en-GB",
+    "español": "es-ES",
+    "español de Estados Unidos": "es-US",
+    "français": "fr-FR",
+    'हिन्दी': "hi-IN",
+    "Bahasa Indonesia": "id-ID",
+    "italiano": "it-IT",
+    "日本語": "ja-JP",
+    "한국의": "ko-KR",
+    "Nederlands": "nl-NL",
+    "polski": "pl-PL",
+    "português do Brasil": "pt-BR",
+    "русский": "ru-RU",
+    "Chinese": "zh-CN",
+    "Cantonese": "zh-HK"
 }
 
 export default symObjSpeechToText

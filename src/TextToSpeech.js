@@ -6,12 +6,6 @@ export default function TextToSpeech(inputText, targetLanguage, isToggled) {
             voices.push(synth[i])
         }
     }
-    voices.sort(function (a, b) {
-        const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
-        if (aname < bname) return -1;
-        else if (aname === bname) return 0;
-        else return +1;
-    });
     if (inputText !== '') {
         var utterThis = new SpeechSynthesisUtterance(inputText);
         utterThis.onend = function (event) {
