@@ -14,11 +14,14 @@ export default function TextToSpeech(inputText, targetLanguage, isToggled) {
         utterThis.onerror = function (event) {
             console.error('SpeechSynthesisUtterance.onerror');
         }
+        console.log(voices)
         targetLanguage = "Google " + targetLanguage
+        console.log(targetLanguage)
         if (targetLanguage === "Google Chinese") {
-            utterThis.voice = voices[14]
+            utterThis.voice = voices.filter(voice => voice.name.includes("普通话"))[0]
         } else if (targetLanguage === "Google Cantonese") {
-            utterThis.voice = voices[18]
+            utterThis.voice = voices.filter(voice => voice.name.includes("粤語"))[0]
+            console.log("testing")
         } else {
             for (let i = 0; i < voices.length; i++) {
                 if (voices[i].name === targetLanguage) {

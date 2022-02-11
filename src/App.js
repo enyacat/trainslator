@@ -1,4 +1,3 @@
-// import React, { Component } from 'react';
 import SpeechToText from './SpeechToText.js'
 import { useState } from 'react'
 import './App.css';
@@ -6,14 +5,7 @@ import TextBox from './TextBox.js';
 import MessageHistory from './MessageHistory.js'
 import SelectLanguage from "./SelectLanguage.js"
 import Toggle from './Toggle.js';
-// data we need
-// 1. display text => speech to text output
-// 2. output language 
 
-// wireframe 
-// 1. speech to text => string text in english 
-// 2. textbox
-//3. messageHistory <= array ["string 1 ", "string 2"] <= text to text 
 
 
 function App() {
