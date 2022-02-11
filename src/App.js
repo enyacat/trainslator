@@ -4,8 +4,7 @@ import { useState } from 'react'
 import './App.css';
 import TextBox from './TextBox.js';
 import MessageHistory from './MessageHistory.js'
-import SelectTarget from "./SelectTarget.js"
-import SelectOriginal from "./SelectOriginal.js"
+import SelectLanguage from "./SelectLanguage.js"
 import Toggle from './Toggle.js';
 // data we need
 // 1. display text => speech to text output
@@ -25,14 +24,6 @@ function App() {
   var [targetLanguage, setTargetLanguage] = useState("한국의")
   var [isToggled, setIsToggled] = useState(false)
 
-  function P(props) {
-    console.log(props.classname)
-    return (
-      <p className={props.classname}>
-        hello
-      </p>
-    )
-  }
   return (
     <div className="App">
 
@@ -45,9 +36,9 @@ function App() {
         </section>
         <TextBox displayText={displayText} setDisplayText={setDisplayText} translated={translated} setTranslated={setTranslated} currentWord={currentWord} setCurrentWord={setCurrentWord} targetLanguage={targetLanguage} originalLanguage={originalLanguage} isToggled={isToggled} />
         <div className='selection-grid'>
-          <SelectOriginal originalLanguage={originalLanguage} setOriginalLanguage={setOriginalLanguage} />
+          <SelectLanguage Language={originalLanguage} setLanguage={setOriginalLanguage} divClass="'select-header'" selectClass='select-element' />
           <div className='arrow right'></div>
-          <SelectTarget targetLanguage={targetLanguage} setTargetLanguage={setTargetLanguage} />
+          <SelectLanguage Language={targetLanguage} setLanguage={setTargetLanguage} divClass="'target-header'" selectClass='target-element' />
         </div>
         <SpeechToText setCurrentWord={setCurrentWord} originalLanguage={originalLanguage} />
         <Toggle isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />

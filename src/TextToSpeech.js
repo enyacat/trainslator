@@ -14,6 +14,7 @@ export default function TextToSpeech(inputText, targetLanguage, isToggled) {
         utterThis.onerror = function (event) {
             console.error('SpeechSynthesisUtterance.onerror');
         }
+        targetLanguage = "Google " + targetLanguage
         if (targetLanguage === "Google Chinese") {
             utterThis.voice = voices[14]
         } else if (targetLanguage === "Google Cantonese") {
