@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Toggle.css"
-import talk from './images/talk-svgrepo-com.svg';
-import notalk from './images/NoTalk.svg';
+import talk from './images/unmuted.png';
+import notalk from './images/muted.png';
 
 function Toggle({ isToggled, onToggle }) {
     return (
