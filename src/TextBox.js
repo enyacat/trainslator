@@ -24,7 +24,6 @@ export default function TextBox({ displayText, setDisplayText, translated, setTr
 
     useEffect(() => {
         TextToSpeech(translated[translated.length - 1], targetLanguage, isToggled)
-        // console.log("it is here", translated)
     }, [translated])
 
     return (
