@@ -25,14 +25,6 @@ function App() {
   var [targetLanguage, setTargetLanguage] = useState("한국의")
   var [isToggled, setIsToggled] = useState(false)
 
-  function P(props) {
-    console.log(props.classname)
-    return (
-      <p className={props.classname}>
-        hello
-      </p>
-    )
-  }
   return (
     <div className="App">
 
