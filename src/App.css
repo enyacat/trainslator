@@ -8,9 +8,7 @@
 body, html {
   background-color: black;
 }
-.hello {
-  background-color: white;
-}
+
 .App {
   display: flex;
   justify-content: center;

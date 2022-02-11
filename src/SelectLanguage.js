@@ -1,7 +1,7 @@
 import symObjTextToSpeech from './symObjTextToSpeech.js'
-import './SelectOriginal.css'
+import './SelectLanguage.css'
 
-export default function SelectOriginal({ originalLanguage, setOriginalLanguage }) {
+export default function SelectLanguage({ Language, setLanguage, divClass, selectClass }) {
     var voices = Object.keys(symObjTextToSpeech)
     function Options() {
         var Options = []
@@ -17,13 +17,13 @@ export default function SelectOriginal({ originalLanguage, setOriginalLanguage }
 
     function handleChange(event) {
         var newOption = event.target.value
-        setOriginalLanguage(newOption)
+        setLanguage(newOption)
     }
 
     return (
         <div>
-            <div className='select-header'></div>
-            <select className='select-element' value={originalLanguage} onChange={handleChange}>
+            <div className={divClass}></div>
+            <select className={selectClass} value={Language} onChange={handleChange}>
                 <Options />
             </select>
         </div>
