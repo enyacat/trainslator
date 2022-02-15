@@ -1,4 +1,5 @@
 ## **TRAINSLATOR - A React translator app**
+A link to the app: https://trainslator2022.herokuapp.com/
 This sample shows how to integrate the Azure Speech service, translator and Web Speech API into a A React translator app. This app allows user to set recognition language and target language, captures audio from a microphone, editing the text before translating into the target language in text and audio.
 
 ## **Wireframes**
@@ -15,6 +16,7 @@ Here’s a simple diagram of the planning of our single page app [https://excali
 3. Day 2: Group discussing more planning. “**[HarryPdot](https://github.com/HarryPdot)**” refactored the code into React components.
 4. Day 3: Group solving the “input text not editable” problem. “**[HarryPdot](https://github.com/HarryPdot)”** solved the async problem and  can display the latest original and translated content. “**[enyacat](https://github.com/enyacat)”** couldn’t get Azure text to speech API to work and turned to the Web Speech API but having issues with the async and the module starting time.
 5. Day 4: “**[epoch](https://gist.github.com/epoch)”** helped with the async problem in text to speech. **“[brendonwang9](https://github.com/brendonwang9)”** refactored the code into React components, made the target and recognition language selection lists working. Group conquered the hurdle of integrating the language codes of Azure and the Web Speech APIs. “**[HarryPdot](https://github.com/HarryPdot)**” did CSS arranging each elements in place.
+6. Day 5: “[enyacat](https://github.com/enyacat)” got the toggle for sound function in, “[HarryPdot](https://github.com/HarryPdot)” arranged the toggle picture, and “[brendonwang9](https://github.com/brendonwang9)” changed the language display.
 
 ## **Prerequisites**
 
